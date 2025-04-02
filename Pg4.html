@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google pay</title>
+    <style>
+        body {
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        /* Back arrow  */
+        
+       a{
+        text-decoration: none;
+        color:black;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+       }
+        .arrow {
+            border:  solid black;
+            border-width: 0 3.5px 3.5px 0;            
+            display: inline-block;
+            align-items: center;
+             padding: 3px;
+            width:5px;
+            height: 5px;
+            margin-top:25px;
+            margin-left:15px;
+            text-decoration: none;
+        }
+
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            /* margin-top:30px; */
+           
+        }
+         
+        
+        /* Back arrow  */
+
+        /*phone screen*/
+        .iphone {
+            width: 320px;
+            /* Adjust as needed */
+            height: 640px;
+            /* Adjust as needed */
+            background-color: black;
+            border-radius: 40px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .screen {
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            border-radius: 20px;
+        }
+
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 30px;
+            background-color: black;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .speaker {
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .camera {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 8px;
+            height: 8px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+
+        .button-left {
+            position: absolute;
+            top: 10%;
+            left: -5px;
+            width: 4px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .button-right {
+            position: absolute;
+            top: 10%;
+            right: -5px;
+            width: 4px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .power-button {
+            position: absolute;
+            top: 20%;
+            right: -5px;
+            width: 4px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .bottom-bar {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 5px;
+            background-color: #333;
+            border-radius: 3px;
+        }
+        /*phone screen*/
+        /* .iphone {
+            width: 320px;
+            height: 640px;
+            background-color: black;
+            border-radius: 40px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .screen {
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            border-radius: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+        #balance-section {
+            border: 1px solid #0C55CC;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            margin-top: 15px;
+            margin-left: 13px;
+            margin-right: 15px;
+            width: 220px;
+            /* box-sizing: border-box; */
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #balance-section p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        input[type="number"] {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 2px;
+            margin-left: 15px;
+            font-size: 16px;
+        }
+        input:focus {
+    border-color: rgba(12, 85, 204, 0.89);
+    outline: none; /* Optional: Removes the default browser outline */
+}
+        #withdraw-input{
+            margin-top: 15px;
+        }
+        button {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            margin-left: 15px;
+            /* border: none; */
+            border: 2px solid #0C55CC;
+            color: #0C55CC;
+            background: white;
+            border-radius: 17px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #BtnProceed{
+            /* margin-top: 115px; */
+            background: #0C55CC;
+            color: white;
+            border-radius: 20px;
+        }
+        #BtnDeposit{
+             width: 100px;
+             margin-left: 170px;
+            margin-top: 2.5px;
+        }
+
+        #BtnWithdraw{
+             width: 100px;
+             margin-left: 170px;
+            margin-top: 2.5px;
+        }
+        #balance{
+            color: #0C55CC;
+        }
+        #withdraw{
+            color: red;
+        }
+        #deposit{
+            color: green;
+        }
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="iphone">
+        <div class="notch">
+            <div class="speaker"></div>
+        </div>
+        <div class="camera"></div>
+        <div class="button-left"></div>
+        <div class="power-button"></div>
+        <div class="screen">
+            <a  href="Envelope.html">   <i class="arrow left"></i>  </a> 
+             <a class="link" href="Envelope.html">    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Google Envelope  </a> 
+            <div class="container">
+                <div id="balance-section">
+                    <p><strong>Balance</strong> &nbsp; :$ <span id="balance">1000</span></p>
+                    <p><strong>Deposit</strong> &nbsp;&nbsp; :$ <span id="deposit">0</span></p>
+                    <p><strong>Withdraw</strong> :$ <span id="withdraw">0</span></p>
+                </div>
+                <div class="divider"></div>
+                <input type="number" id="deposit-input" placeholder="Deposit Amount">
+                <button id="BtnDeposit" onclick="depositMoney()">Deposit</button>
+                <input type="number" id="withdraw-input" placeholder="Withdraw Amount">
+                <button id="BtnWithdraw"onclick="withdrawMoney()">Withdraw</button>
+                <br><br><br>
+            <a href="success.html">   <button id="BtnProceed">Proceed</button> </a> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let balance = 1000;
+        let totalDeposit = 0;
+        let totalWithdraw = 0;
+
+        function updateUI() {
+            document.getElementById('balance').innerText = balance;
+            document.getElementById('deposit').innerText = totalDeposit;
+            document.getElementById('withdraw').innerText = totalWithdraw;
+        }
+
+        function depositMoney() {
+            let depositAmount = parseFloat(document.getElementById('deposit-input').value);
+            if (!isNaN(depositAmount) && depositAmount > 0) {
+                balance += depositAmount;
+                totalDeposit += depositAmount;
+                updateUI();
+            } else {
+                alert('Please enter a valid deposit amount.');
+            }
+            document.getElementById('deposit-input').value = '';
+            
+        }
+
+        function withdrawMoney() {
+            let withdrawAmount = parseFloat(document.getElementById('withdraw-input').value);
+            if (!isNaN(withdrawAmount) && withdrawAmount > 0 && withdrawAmount <= balance) {
+                balance -= withdrawAmount;
+                totalWithdraw += withdrawAmount;
+                updateUI();
+            } else {
+                alert('Insufficient balance or invalid amount.');
+            }
+            document.getElementById('withdraw-input').value = '';
+        }
+
+          // Listen for "Enter" keypress on deposit input
+    document.getElementById('deposit-input').addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            depositMoney();
+        }
+    });
+
+    // Listen for "Enter" keypress on withdraw input
+    document.getElementById('withdraw-input').addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            withdrawMoney();
+        }
+    });
+    </script>
+</body>
+</html>

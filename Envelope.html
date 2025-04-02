@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pg2.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Google Pay</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* top img */
+        .image-container {
+            width: 100%;
+            text-align: center;
+            /* Center the image horizontally */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            /* Make the image responsive */
+            height: 120px;
+            display: block;
+            /* Remove extra space below the image */
+            margin: 0 auto;
+            /* Center the image horizontally */
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        /* top img */
+
+         /* Back arrow  */
+        
+       a{
+        text-decoration: none;
+        color:black;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+       }
+        .arrow {
+            border:  solid black;
+            border-width: 0 3.5px 3.5px 0;            
+            display: inline-block;
+            align-items: center;
+             padding: 3px;
+            width:5px;
+            height: 5px;
+            margin-top:25px;
+            margin-left:15px;
+            text-decoration: none;
+        }
+
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            /* margin-top:30px; */
+           
+        }
+         
+        
+        /* Back arrow  */
+
+        .iphone {
+            width: 320px;
+            /* Adjust as needed */
+            height: 640px;
+            /* Adjust as needed */
+            background-color: black;
+            border-radius: 40px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .screen {
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            border-radius: 20px;
+        }
+
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 30px;
+            background-color: black;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .speaker {
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .camera {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 8px;
+            height: 8px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+
+        .button-left {
+            position: absolute;
+            top: 10%;
+            left: -5px;
+            width: 4px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .button-right {
+            position: absolute;
+            top: 10%;
+            right: -5px;
+            width: 4px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .power-button {
+            position: absolute;
+            top: 20%;
+            right: -5px;
+            width: 4px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .bottom-bar {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 5px;
+            background-color: #333;
+            border-radius: 3px;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .material-icons {
+            color: #0C55CC;
+            font-size: 20px;
+            
+        }
+        p{
+            font-size:10px;
+            font-weight: bold;
+        }
+        
+        h3{
+            color: #0C55CC;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .envelope-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .envelope-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .envelope-list li:last-child {
+            border-bottom: none;
+        }
+
+        .envelope-list li span {
+            flex-grow: 1;
+        }
+
+        .envelope-list li button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.2em;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+    </head>
+
+    <body>
+        <div class="iphone">
+            <div class="notch">
+                <div class="speaker"></div>
+            </div>
+            <div class="camera"></div>
+            <div class="button-left"></div>
+            <div class="power-button"></div>
+            <div class="screen">
+                <a  href="QR.html">   <i class="arrow left"></i>  </a> 
+                <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My Envelopes</h3>
+                <ul class="envelope-list" id="envelope-list">
+                    <li>
+                    <span>Shopping</span>
+                    <div>
+                    <a href="Pg4.html">     <button class="play-btn" data-envelope-name="Shopping">
+                            <span class="material-icons">
+                                arrow_circle_right
+                            </span>
+                        </button></a>
+                    </div>
+                </li><li>
+                    <span>Grocery</span>
+                    <div>
+                    <a href="Pg4.html">    <button class="play-btn" data-envelope-name="Grocery">
+                            <span class="material-icons">
+                                arrow_circle_right
+                            </span>
+                        </button></a>
+                    </div>
+                </li><li>
+                    <span>Accessories</span>
+                    <div>
+                    <a href="Pg4.html">     <button class="play-btn" data-envelope-name="Accessories">
+                            <span class="material-icons">
+                                arrow_circle_right
+                            </span>
+                        </button></a>
+                    </div>
+                </li><li>
+                    <span>Charity</span>
+                    <div>
+                    <a href="Pg4.html">     <button class="play-btn" data-envelope-name="Charity">
+                            <span class="material-icons">
+                                arrow_circle_right
+                            </span>
+                        </button></a>
+                    </div>
+                </li></ul>
+            </div>
+
+          <script>
+            
+        
+            
+        document.addEventListener('DOMContentLoaded', function() {
+    const addEnvelopeDiv = document.querySelector('.add-envelope');
+    const envelopeNameInput = document.getElementById('envelope-name');
+    const addBtn = document.getElementById('add-btn');
+    const envelopeList = document.getElementById('envelope-list');
+
+    addEnvelopeDiv.addEventListener('click', () => {
+        addEnvelopeDiv.classList.toggle('active');
+        envelopeNameInput.focus(); 
+    });
+
+    addBtn.addEventListener('click', addEnvelope);
+
+    envelopeNameInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addEnvelope();
+        }
+    });
+
+    // Envelope to do list 
+    function addEnvelope() {
+        const envelopeName = envelopeNameInput.value.trim();
+        if (envelopeName) {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${envelopeName}</span>
+                <div>
+                    <button class="delete-btn">
+                        <span class="material-icons" class="delete-btn">delete</span>
+                    </button>
+                    <button class="play-btn" data-envelope-name="${envelopeName}">
+                        <span class="material-icons" class="material-symbols-outlined">
+                            arrow_circle_right
+                        </span>
+                    </button>
+                </div>
+            `;
+            envelopeList.appendChild(li);
+            envelopeNameInput.value = '';
+            addEnvelopeDiv.classList.remove('active'); 
+
+            const deleteBtn = li.querySelector('.delete-btn');
+            const playBtn = li.querySelector('.play-btn');
+
+            deleteBtn.addEventListener('click', () => {
+                envelopeList.removeChild(li);
+            });
+
+            playBtn.addEventListener('click', (event) => {
+                const envelopeName = event.currentTarget.dataset.envelopeName;
+                // Navigate to Pg.html with the envelope name as a query parameter
+                window.location.href = `Pg4.html?envelope=${encodeURIComponent(envelopeName)}`;
+            });
+        }
+    }
+});
+            
+         
+    
+          </script>
+        </body>
+
+        </html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pg2.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Google Pay</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* search bar*/
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            background-color: #f0f0f0;
+            /* Light background for the search bar */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #f0f0f0;
+            border-radius: 5px;
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+        }
+
+        /* search bar*/
+
+        /* top img */
+        .image-container {
+            width: 100%;
+            text-align: center;
+            /* Center the image horizontally */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            /* Make the image responsive */
+            height: 120px;
+            display: block;
+            /* Remove extra space below the image */
+            margin: 0 auto;
+            /* Center the image horizontally */
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        /* top img */
+
+
+        /* Google Envelope*/
+        .image-GoogleEnvelope {
+            width: 100%;
+            text-align: center;
+            /* Center the image horizontally */
+        }
+
+        .image-GoogleEnvelope img {
+            width: 80px;
+            /* Make the image responsive */
+            display: block;
+            /* Remove extra space below the image */
+            margin: 0 auto;
+            /* Center the image horizontally */
+        }
+
+        .image-GoogleEnvelope {
+            width: 80px;
+            /* Make the image responsive */
+            display: block;
+            /* Remove extra space below the image */
+            margin: 0 auto;
+            /* Center the image horizontally */
+
+        }
+
+        /* Google Envelope*/
+
+        /* BottomSectionImg */
+        .BottomSectionImg {
+            width: 100%;
+            text-align: center;
+            /* Center the image horizontally */
+            border-bottom: 10px;
+            
+        }
+
+        .BottomSectionImg img {
+            width: 100%;
+            /* Make the image responsive */
+            display: block;
+            /* Remove extra space below the image */
+            margin: 0 auto;
+            /* Center the image horizontally */
+        }
+
+        /* BottomSectionImg */
+
+        .iphone {
+            width: 320px;
+            /* Adjust as needed */
+            height: 640px;
+            /* Adjust as needed */
+            background-color: black;
+            border-radius: 40px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .screen {
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            border-radius: 20px;
+        }
+
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 30px;
+            background-color: black;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .speaker {
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .camera {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 8px;
+            height: 8px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+
+        .button-left {
+            position: absolute;
+            top: 10%;
+            left: -5px;
+            width: 4px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .button-right {
+            position: absolute;
+            top: 10%;
+            right: -5px;
+            width: 4px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .power-button {
+            position: absolute;
+            top: 20%;
+            right: -5px;
+            width: 4px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        .bottom-bar {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 5px;
+            background-color: #333;
+            border-radius: 3px;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .material-icons {
+            color: #0C55CC;
+            font-size: 20px;
+            
+        }
+        p{
+            font-size:10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iphone">
+        <div class="notch">
+            <div class="speaker"></div>
+        </div>
+        <div class="camera"></div>
+        <div class="button-left"></div>
+        <div class="power-button"></div>
+        <div class="screen">
+            <div class="search-bar">
+                <input type="text" placeholder="Pay Anyone on UPI">
+            </div>
+            <div class="image-container">
+                <img src="top img.png" alt="Google Image">
+            </div>
+
+            <div class="image-GoogleEnvelope">
+                <a href="Pg2.html"><img src="Envelope img.png" alt="Google Envelope "></a>
+            </div>
+            <!-- midsection  -->
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <a href="QR.html"><span class="material-icons">qr_code_scanner</span></a>
+                    <p>Scan any QR code</p>
+                </div>
+                <div class="icon-item">
+                    <span class="material-icons">contacts</span>
+                    <p>Pay contacts</p>
+                </div>
+                <div class="icon-item">
+                    <span class="material-icons">phone_android</span>
+                    <p>Pay phone number</p>
+                </div>
+                <div class="icon-item">
+                    <span class="material-icons">account_balance</span>
+                    <p>Bank transfer</p>
+                </div>
+                <div class="icon-item">
+                    <span class="material-icons">alternate_email</span>
+                    <p>Pay UPI ID or number</p>
+                </div>
+                <div class="icon-item">
+                    <span class="material-icons">person</span>
+                    <p>Self transfer</p>
+                </div>
+                <div class="icon-item">
+                    <span class="material-icons">receipt</span>
+                    <p>Pay bills</p>
+                </div>
+                <div class="icon-item">
+                    <span class="material-icons">phone_iphone</span>
+                    <p>Mobile recharge</p>
+                </div>
+            </div>
+            <!-- midsection  -->
+            <div class="BottomSectionImg">
+                <img src="BottomSectionImg.png" alt="MidSectionImg">
+            </div>
+        </div>
+        <div class="bottom-bar"></div>
+    </div>
+</body>
+
+</html>
